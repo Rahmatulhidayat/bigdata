@@ -1,0 +1,168 @@
+Untuk pengguna baru, kami sangat menyarankan anda untuk  menginstal Anaconda
+#  Kami sarankan mengunduh versi terbaru Python 3 Anaconda (saat ini Python 3.5).
+## Instal versi Anaconda yang Anda unduh, ikuti petunjuk di halaman unduh.
+### Selamat, Anda telah menginstal Jupyter Notebook. Untuk menjalankan notebook:
+lalu ketik di anaconda prompt
+Pemasangan Jupyter membutuhkan Python 3.3 atau lebih tinggi, atau Python 2.7. IPython 1.x, yang termasuk bagian-bagian yang kemudian menjadi Jupyter, adalah versi terakhir untuk mendukung Python 3.2 dan 2.6.
+Sebagai pengguna Python yang ada, Anda mungkin ingin menginstal Jupyter menggunakan manajer paket Python, pip, bukan Anaconda.
+Pertama, pastikan Anda memiliki pip terbaru; versi lama mungkin mengalami masalah dengan beberapa dependensi:
++pip3 install --upgrade pip
+Kemudian instal Notebook Jupyter menggunakan:
++pip3 instal jupyter
+(Gunakan pip jika menggunakan legacy Python 2.) 
+
+Selamat. Anda telah menginstal Notebook Jupyter.
+Lihat Menjalankan Notebook untuk 
+selanjutnya anda 
+Mulai server notebook dari baris perintah:
+Setelah Anda menginstal Notebook Jupyter di komputer Anda, Anda siap menjalankan server notebook. Anda dapat memulai server
+notebook dari baris perintah (menggunakan Terminal pada Mac / Linux, Command Prompt pada Windows) dengan menjalankan:
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\xxddayxx> jupyter notebook
+[W 08:31:47.087 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 08:31:47.091 NotebookApp] Serving notebooks from local directory: C:\Users\xxddayxx
+[I 08:31:47.091 NotebookApp] The Jupyter Notebook is running at:
+[I 08:31:47.092 NotebookApp] http://localhost:8888/?token=ce707b392e5b0486167ebe1f1f699471827b8aad6d0bdbfa
+[I 08:31:47.092 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:31:47.163 NotebookApp]
+
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=ce707b392e5b0486167ebe1f1f699471827b8aad6d0bdbfa
+[I 08:31:48.148 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[I 08:34:22.163 NotebookApp] Interrupted...
+[I 08:34:22.163 NotebookApp] Shutting down 0 kernels
+PS C:\Users\xxddayxx> jupyter notebook notebook.ipynb
+[C 08:34:47.001 NotebookApp] No such file or directory: C:\Users\xxddayxx\notebook.ipynb
+PS C:\Users\xxddayxx> jupyter notebook --port 9999
+[W 08:35:02.660 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 08:35:02.664 NotebookApp] Serving notebooks from local directory: C:\Users\xxddayxx
+[I 08:35:02.664 NotebookApp] The Jupyter Notebook is running at:
+[I 08:35:02.665 NotebookApp] http://localhost:9999/?token=1c216b995fb502549bb3e1c0b6b4918c07b79fbf6fd7def5
+[I 08:35:02.665 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:35:02.735 NotebookApp]
+
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9999/?token=1c216b995fb502549bb3e1c0b6b4918c07b79fbf6fd7def5
+[I 08:35:03.879 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[I 08:35:22.736 NotebookApp] Interrupted...
+[I 08:35:22.737 NotebookApp] Shutting down 0 kernels
+PS C:\Users\xxddayxx>
+PS C:\Users\xxddayxx>
+PS C:\Users\xxddayxx> jupyter notebook --no-browser
+[W 08:35:45.207 NotebookApp] Terminals not available (error was No module named 'winpty.cywinpty')
+[I 08:35:45.211 NotebookApp] Serving notebooks from local directory: C:\Users\xxddayxx
+[I 08:35:45.211 NotebookApp] The Jupyter Notebook is running at:
+[I 08:35:45.212 NotebookApp] http://localhost:8888/?token=890ddfcfb65348d4ced9fd8c1a37f7c37bd6a8b8a91b0b8f
+[I 08:35:45.212 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:35:45.227 NotebookApp]
+
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=890ddfcfb65348d4ced9fd8c1a37f7c37bd6a8b8a91b0b8f
+[I 08:36:50.228 NotebookApp] Interrupted...
+[I 08:36:50.229 NotebookApp] Shutting down 0 kernels
+PS C:\Users\xxddayxx> jupyter notebook --help
+The Jupyter HTML Notebook.
+
+This launches a Tornado based HTML Notebook Server that serves up an
+HTML5/Javascript Notebook client.
+
+Subcommands
+-----------
+
+Subcommands are launched as `jupyter-notebook cmd [args]`. For information on
+using subcommand 'cmd', do: `jupyter-notebook cmd -h`.
+
+list
+    List currently running notebook servers.
+stop
+    Stop currently running notebook server for a given port
+password
+    Set a password for the notebook server.
+
+Options
+-------
+
+Arguments that take values are actually convenience aliases to full
+Configurables, whose aliases are listed on the help line. For more information
+on full configurables, see '--help-all'.
+
+--debug
+    set log level to logging.DEBUG (maximize logging output)
+--generate-config
+    generate default config file
+-y
+    Answer yes to any questions instead of prompting.
+--no-browser
+    Don't open the notebook in a browser after startup.
+--pylab
+    DISABLED: use %pylab or %matplotlib in the notebook to enable matplotlib.
+--no-mathjax
+    Disable MathJax
+
+    MathJax is the javascript library Jupyter uses to render math/LaTeX. It is
+    very large, so you may want to disable it if you have a slow internet
+    connection, or for offline use of the notebook.
+
+    When disabled, equations etc. will appear as their untransformed TeX source.
+--allow-root
+    Allow the notebook to be run from root user.
+--script
+    DEPRECATED, IGNORED
+--no-script
+    DEPRECATED, IGNORED
+--log-level=<Enum> (Application.log_level)
+    Default: 30
+    Choices: (0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL')
+    Set the log level by value or name.
+--config=<Unicode> (JupyterApp.config_file)
+    Default: ''
+    Full path of a config file.
+--ip=<Unicode> (NotebookApp.ip)
+    Default: 'localhost'
+    The IP address the notebook server will listen on.
+--port=<Int> (NotebookApp.port)
+    Default: 8888
+    The port the notebook server will listen on.
+--port-retries=<Int> (NotebookApp.port_retries)
+    Default: 50
+    The number of additional ports to try if the specified port is not
+    available.
+--transport=<CaselessStrEnum> (KernelManager.transport)
+    Default: 'tcp'
+    Choices: ['tcp', 'ipc']
+--keyfile=<Unicode> (NotebookApp.keyfile)
+    Default: ''
+    The full path to a private key file for usage with SSL/TLS.
+--certfile=<Unicode> (NotebookApp.certfile)
+    Default: ''
+    The full path to an SSL/TLS certificate file.
+--client-ca=<Unicode> (NotebookApp.client_ca)
+    Default: ''
+    The full path to a certificate authority certificate for SSL/TLS client
+    authentication.
+--notebook-dir=<Unicode> (NotebookApp.notebook_dir)
+    Default: ''
+    The directory to use for notebooks and kernels.
+--browser=<Unicode> (NotebookApp.browser)
+    Default: ''
+    Specify what command to use to invoke a web browser when opening the
+    notebook. If not specified, the default browser will be determined by the
+    `webbrowser` standard library module, which allows setting of the BROWSER
+    environment variable to override it.
+--pylab=<Unicode> (NotebookApp.pylab)
+    Default: 'disabled'
+    DISABLED: use %pylab or %matplotlib in the notebook to enable matplotlib.
+
+To see all available configurables, use `--help-all`
+
+Examples
+--------
+
+    jupyter notebook                       # start the notebook
+    jupyter notebook --certfile=mycert.pem # use SSL/TLS certificate
+    jupyter notebook password              # enter a password to protect the server
